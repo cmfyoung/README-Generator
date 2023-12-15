@@ -14,15 +14,16 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `
   
-  # ${data.title}
+  # Title
+  ${data.title}\n
 
 
-  ## ${Description}
+  ## Description
+  ${Description}\n
 
 
   ## Table of Contents 
   
- 
   - [User Story] (#story)
   - [Acceptance Criteria] (#acceptance)
   - [Installation](#installation)
@@ -30,39 +31,39 @@ function generateMarkdown(data) {
   - [Credits](#credits)
   - [License](#license)
 
-  ## User Story 
+  ## About
 
+  ${About}\n
   ---
   
-  ## Acceptance Criteria
-  
-  ---
+  ## Installation 
 
-  ## Screenshots
-
-  ---
-  
-  ## Installation
+  ${Installation}\n
 
   ---
   
   ## Usage
   
-  Provide instructions and examples for use. Include screenshots as needed.
+  ${usage}\n
 
   ## Credits
   
-  List your collaborators, if any, with links to their GitHub profiles.
-  
-  If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-  
-  If you followed tutorials, include links to those here as well.
+  ${credit}\n
   
   ## License
-  
+  ${License}\n
   License used for this project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
   
   ---
+
+  ##Contact 
+  Github Repository : ${repo}\n
+
+  Website URL : ${URL}\n
+
+  Author: ${author}\n
+
+  Email: ${email}\n
 `;
 }
 

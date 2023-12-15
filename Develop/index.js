@@ -18,8 +18,8 @@ const questions = [
     },
     {
       type: 'input',
-      message: 'What was your motivation?',
-      name: 'motivation',
+      message: 'Go into more detail about the project (motivation, why was it built, what problem does it solve, what did you learn, etc) :',
+      name: 'about',
     },
     {
       type: 'input',
@@ -40,6 +40,16 @@ const questions = [
       type: 'input',
       message: 'Do you have installation instructions?',
       name: 'installation',
+    },
+    {
+      type: 'input',
+      message: 'Please provide instructions and examples for use. Include screenshots as needed:',
+      name: 'usage',
+    },
+    {
+      type: 'input',
+      message: 'Would you like to acknowledge any collaborators?',
+      name: 'credit',
     },
     {
       type: 'input',
@@ -73,7 +83,7 @@ const questions = [
     {
       type: 'input',
       message: 'What is your name?',
-      name: 'name',
+      name: 'author',
     },
     {
       type: 'input',
@@ -87,19 +97,19 @@ const questions = [
 
 
 // TODO: Create a function to write README file
-// function writeToFile(READEME.md, data) {}
-
-.then((answers) => {
+function writeToFile(fileName, data) {
+  fs.writeToFile(fileName, data)
+}
+  
+// TODO: Create a function to initialize app
+  function init() {}
+    inquirer.createPromptModule(questions).then((response) => {
     const readmeContent = generateREADME(answers);
 
-    fs.writeFile('README.md', generateREADME, (err) =>
-      err ? console.log(err) : console.log('Successfully created index.html!')
-    );
-  });
+  fs.writeFile('README.md', generateREADME, (err) =>
+    err ? console.log(err) : console.log('Successfully created README.md!')
+  );
+});
 
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
+  // Function call to initialize app
 init();
