@@ -1,25 +1,43 @@
+const fs = require('fs');
+
 // TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge (license) {
+  if (!license) {
+    return '';
+  }
+
+  return `[[Static Badge](https://img.shields.io/badge/:badgeContent)](https://opensource.org/licenses/${license})`;
+}
 
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (!license) {
+    return '';
+  }
+
+  return `[License](https://opensource.org/licenses/${license})`;
+}
 
 // TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+
+function renderLicenseSection(license) {
+  if (!license) {
+    return '';
+  }
+
+  return `[License](https://opensource.org/licenses/${license})`;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `
+    let readmeText = `
   
   # Title
   ${data.title}\n
 
 
   ## Description
-  ${Description}\n
+  ${data.description}\n
 
 
   ## Table of Contents 
@@ -33,38 +51,46 @@ function generateMarkdown(data) {
 
   ## About
 
-  ${About}\n
+  ${data.about}\n
   ---
   
   ## Installation 
 
-  ${Installation}\n
+  ${data.installation}\n
 
   ---
   
   ## Usage
   
-  ${usage}\n
+  ${data.usage}\n
 
   ## Credits
   
-  ${credit}\n
+  ${data.credit}\n
   
   ## License
-  ${License}\n
+  ${data.license}\n
   License used for this project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
   
   ---
 
   ##Contact 
-  Github Repository : ${repo}\n
+  Github Repository : ${data.repo}\n
 
-  Website URL : ${URL}\n
+  Website URL : ${data.URL}\n
 
-  Author: ${author}\n
+  Author: ${data.author}\n
 
-  Email: ${email}\n
-`;
+  Email: ${data.email}\n
+`
+
+fs.writeFile('README.md', readmeText, (err) => {
+  if (err) {
+     console.log(err);
+   } else {
+    console.log('Successfully created README.md!');
+   }
+});
 }
 
 module.exports = generateMarkdown;
