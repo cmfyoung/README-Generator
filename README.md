@@ -1,12 +1,12 @@
 
   
   # Title
-  README.md
+README Generator 
 
 
 
   ## Description
-  It is a professional readme file generator
+ This is a command-line application that generates a README file. 
 
 
 
@@ -27,7 +27,7 @@
   
   ## Installation 
 
-  No
+You will need to install node.js and npm i. Type "node index.js" in your terminal to run the generator and answer the questions to build your README file. 
 
 
   ---
