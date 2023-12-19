@@ -33,9 +33,10 @@
   ---
   
   ## Usage
+  Watch a walkthrough of the generator here: 
+  https://watch.screencastify.com/v/PPRQ9ddkmmbutC9nvcWK
   
-  N/A
-
+  https://drive.google.com/file/d/19jK3-HOqdIEsw4kTmKGZEbAzns9cl_WH/view
 
   ## Credits
   
