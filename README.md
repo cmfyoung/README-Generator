@@ -39,7 +39,7 @@
 
   ## Credits
   
-  I would like to thank my teacher and TA for their help on this project
+ Acknowledgements Diego Struk Jaia and Andrew Layendecker during office hours. 
 
   
   ## License
