@@ -49,11 +49,16 @@ function generateMarkdown(data) {
   - [Credits](#credits)
   - [License](#license)
 
-  ## About
+  ## User Story
 
-  ${data.about}\n
+  ${data.story}\n
   ---
   
+  ## Acceptance Criteria
+
+  ${data.acceptance}\n
+  ---
+
   ## Installation 
 
   ${data.installation}\n
@@ -63,6 +68,10 @@ function generateMarkdown(data) {
   ## Usage
   
   ${data.usage}\n
+
+  ## Tests
+  
+  ${data.tests}\n
 
   ## Credits
   

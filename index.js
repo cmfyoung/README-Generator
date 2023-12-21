@@ -21,8 +21,13 @@ inquirer.prompt(
     },
     {
       type: 'input',
-      message: 'Go into more detail about the project (motivation, why was it built, what problem does it solve, what did you learn, etc) :',
-      name: 'about',
+      message: 'What is the User Story?',
+      name: 'story',
+    },
+    {
+      type: 'input',
+      message: 'What is the Acceptance Criteria?',
+      name: 'acceptance',
     },
     {
       type: 'input',
@@ -33,6 +38,11 @@ inquirer.prompt(
       type: 'input',
       message: 'Please provide instructions and examples for use. Include screenshots as needed:',
       name: 'usage',
+    },
+    {
+      type: 'input',
+      message: 'If you have any tests for your application you can provide them here:',
+      name: 'tests',
     },
     {
       type: 'input',
