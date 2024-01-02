@@ -1,20 +1,20 @@
 const fs = require('fs');
 
 // TODO: Create a function that returns a license badge based on which license is passed in
-function renderLicenseBadge (license) {
+function renderLicenseBadge(license) {
   if (!license) {
     return '';
-  } else if (license ==="MIT"){
-  return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+  } else if (license === "MIT") {
+    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
   }
-  else if (license ==="GNU3"){
-  return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)IT-yellow.svg)"
+  else if (license === "GNU3") {
+    return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
   }
- else if (license ==="Apache"){
-  return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+  else if (license === "Apache") {
+    return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
   }
-  else if (license ==="MPL2"){
-  return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+  else if (license === "MPL2") {
+    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
   }
 }
 
@@ -41,7 +41,9 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-    let readmeText = `
+  let licenseBadge = renderLicenseBadge(data.license);
+
+  let readmeText = `
   
   # Title
   ${data.title}\n
@@ -53,8 +55,8 @@ function generateMarkdown(data) {
 
   ## Table of Contents 
   
-  - [User Story] (#story)
-  - [Acceptance Criteria] (#acceptance)
+  - [User Story](#story)
+  - [Acceptance Criteria](#acceptance)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
@@ -89,7 +91,8 @@ function generateMarkdown(data) {
   ${data.credit}\n
   
   ## License
-  ${data.license}\n
+  ${licenseBadge}
+  ${renderLicenseSection(data.license)}\n
   License used for this project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
   
   ---
@@ -104,13 +107,13 @@ function generateMarkdown(data) {
   Email: ${data.email}\n
 `
 
-fs.writeFile('README.md', readmeText, (err) => {
-  if (err) {
-     console.log(err);
-   } else {
-    console.log('Successfully created README.md!');
-   }
-});
+  fs.writeFile('README.md', readmeText, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('Successfully created README.md!');
+    }
+  });
 }
 
 module.exports = generateMarkdown;
