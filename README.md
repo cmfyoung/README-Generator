@@ -58,8 +58,11 @@
   ---
   
   ## Usage
-  
-  To be added later
+  ![Screen Shot 2024-01-07 at 10 15 50 PM](https://github.com/cmfyoung/README-Generator/assets/150183426/becf5963-2f9e-4067-b368-3cb02f5ceb33)
+![Screen Shot 2024-01-07 at 10 16 07 PM](https://github.com/cmfyoung/README-Generator/assets/150183426/8b5557ab-c8d8-4f22-a298-192ff561134e)
+![Screen Shot 2024-01-07 at 10 20 17 PM](https://github.com/cmfyoung/README-Generator/assets/150183426/c578b362-2bdc-40d8-b880-8a167043a97d)
+
+
 
 
   ## Tests
