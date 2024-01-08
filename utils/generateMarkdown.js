@@ -47,7 +47,8 @@ function generateMarkdown(data) {
   
   # Title
   ${data.title}\n
-
+  ${licenseBadge}
+  ${renderLicenseSection(data.license)}\n
 
   ## Description
   ${data.description}\n
@@ -91,9 +92,8 @@ function generateMarkdown(data) {
   ${data.credit}\n
   
   ## License
-  ${licenseBadge}
-  ${renderLicenseSection(data.license)}\n
-  License used for this project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+  ${data.license}\n
+  #License used for this project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
   
   ---
 
