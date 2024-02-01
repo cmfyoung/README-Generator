@@ -97,7 +97,7 @@ function generateMarkdown(data) {
   
   ---
 
-  ##Contact 
+  ## Contact 
   Github Repository : ${data.repo}\n
 
   Website URL : ${data.URL}\n
